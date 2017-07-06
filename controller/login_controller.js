@@ -6,6 +6,7 @@ var express = require('express');
 var router = express.Router();
 var bodyParser = require('body-parser');
 router.use(bodyParser.urlencoded({ extended: false }));
+router.use(bodyParser.json());
 
 var UserHelper = require('../helper/user_helper.js');
 var userHelper = new UserHelper();
