@@ -1,5 +1,6 @@
 'use strict';
 
+const util = require('util');
 
 var express = require('express');
 var router = express.Router();
@@ -14,8 +15,7 @@ var tokenHelper = require('../helper/token_helper.js');
 
 
 router.post('/', (req, res) => {
-  console.log("token: "+ req.body);
-  console.log("tok : " + req.body[0]);
+  console.log("token: "+ util.inspect(req.body, false, null));
   googleTokenHelper.verify(
     req.body.token,
     (err, login) => {
