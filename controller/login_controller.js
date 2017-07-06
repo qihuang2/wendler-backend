@@ -16,8 +16,8 @@ var tokenHelper = require('../helper/token_helper.js');
 
 
 router.post('/', (req, res) => {
-  console.log("head: " + util.inspect(req.headers, false, null));
-  console.log("token:  "+ util.inspect(req.body, false, null));
+  //console.log("head: " + util.inspect(req.headers, false, null));
+  //console.log("token:  "+ util.inspect(req.body, false, null));
   googleTokenHelper.verify(
     req.body.token,
     (err, login) => {

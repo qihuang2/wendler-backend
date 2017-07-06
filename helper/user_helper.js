@@ -6,27 +6,38 @@ function UserHelper(){};
 
 //callback params (err, user)
 UserHelper.prototype.createUser = function(userInfo, callback){
+  var lifts = [];
+  lifts.push({
+    "name" : "deadlift",
+    "week" : 0, 
+    "max" : 0
+  });
+
+  lifts.push({
+    "name" : "bench",
+    "week" : 0, 
+    "max" : 0
+  });
+
+
+  lifts.push({
+    "name" : "squat",
+    "week" : 0, 
+    "max" : 0
+  });
+
+  lifts.push({
+    "name" : "overhead",
+    "week" : 0, 
+    "max" : 0
+  });
+
   User.create({
-    _id : userInfo.id,
-    first_name : userInfo.first_name,
-    last_name : userInfo.last_name,
-    email : userInfo.email,
-    deadlift : {
-      max : 0, 
-      week : 0 
-    },
-    squat : {
-      max : 0,
-      week : 0
-    },
-    bench : {
-      max : 0,
-      week : 0
-    },
-    overhead : {
-      max : 0,
-      week : 0
-    }
+    '_id' : userInfo.id,
+    'first_name' : userInfo.first_name,
+    'last_name' : userInfo.last_name,
+    'email' : userInfo.email,
+    'lifts' : lifts
   }, callback);
 };
 
