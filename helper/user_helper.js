@@ -10,26 +10,30 @@ UserHelper.prototype.createUser = function(userInfo, callback){
   lifts.push({
     "name" : "deadlift",
     "week" : 0, 
-    "max" : 0
+    "max" : 0,
+    "advance" : 10
   });
 
   lifts.push({
     "name" : "bench",
     "week" : 0, 
-    "max" : 0
+    "max" : 0, 
+    "advance" : 5
   });
 
 
   lifts.push({
     "name" : "squat",
     "week" : 0, 
-    "max" : 0
+    "max" : 0,
+    "advance" : 10
   });
 
   lifts.push({
     "name" : "overhead",
     "week" : 0, 
-    "max" : 0
+    "max" : 0,
+    "advance" : 5
   });
 
   User.create({
